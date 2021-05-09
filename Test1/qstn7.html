@@ -1,0 +1,28 @@
+<html>
+
+<head>
+    <title>Test 1</title>
+</head>
+
+<body>
+
+    <h3>Fetch the data</h3>
+    <p id="demo"></p>
+    <script type="text/javascript">
+        fetch("https://jsonplaceholder.typicode.com/users")
+            .then(function (response) {
+                return response.json();
+            }).then(function (data) {
+
+                for (var x in data) {
+                    document.write("{" + "name: " + data[x].name + "," + "  username: " + data[x].username + "," + "  email: " + data[x].email + "}," + "<br>");
+                }
+
+            }).catch((error) =>
+                console.log(error));
+
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    
+    <title>Test 1</title>
+    <script type="text/javascript">
+      function validation(){
+        var user = document.getElementById('name').value;
+        var sub = document.getElementById('checkme').checked
+          if(user==""){
+              alert("please enter the username field");
+              return false;
+          }
+          if(sub=="")
+          {
+            alert("please select subject");
+              return false;
+          }
+      }
+    </script>
+</head>
+
+<body>
+    <h3>Validation in javascript</h3>
+    <form action="#" onsubmit= "return validation()">
+
+        <label>Username: </label>
+        <input type="text" name=”firstname” id="name" autocomplete="off"/><br><br>
+        <span></span>
+        <label>Subject: </label>
+        <input type="checkbox" id="checkme" name=”checkme” />Javascript<br><br>
+        <input type="submit" value="submit">
+    </form>
+
+    <script>
+
+    </script>
+</body>
+
+</html>
